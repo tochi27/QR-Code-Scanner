@@ -28,6 +28,9 @@ src/
     movies.ejs
   public/
     default.jpg
+  root/
+    root.controller.ts
+    root.module.ts
   qrcode/
     qrcode.module.ts
     qrcode.controller.ts
