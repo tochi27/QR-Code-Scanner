@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 15px 0;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      img {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Here are 10 Random Movies you need to watch!</h1>
+    <ul>
+      <% movies.forEach(movie => { %>
+      <li>
+        <h2><%= movie.Title %> (<%= movie.Year %>)</h2>
+        <img
+          src="<%= movie.Poster %>"
+          onerror="this.onerror=null; this.src='/default.jpg';"
+          width="200"
+        />
+        <p><strong>Genre:</strong> <%= movie.Genre || 'Unknown' %></p>
+        <p><strong>Year:</strong> <%= movie.Year || 'Unknown' %></p>
+        <p><strong>Released:</strong> <%= movie.Released || 'Unknown' %></p>
+        <p><strong>Plot:</strong> <%= movie.Plot || 'Plot not available.' %></p>
+        <p><strong>Director:</strong> <%= movie.Director || 'N/A' %></p>
+        <p><strong>Rated:</strong> <%= movie.Rated || 'N/A' %></p>
+        <p><strong>Runtime:</strong> <%= movie.Runtime || 'Unknown' %></p>
+        <p><strong>IMDB Rating:</strong> <%= movie.imdbRating || 'N/A' %></p>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
