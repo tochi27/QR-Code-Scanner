@@ -59,19 +59,19 @@ This modular approach greatly enhances code readability, streamlines debugging, 
 
 2. Create a .env file in the root directory:
 
-BASE_URL=http://192.xxx.x.x:3000
+BASE_URL=https://xx-xxxx-xxxxxxx-xxxx.onrender.com
 PORT=3000
 Replace 192.xxx.x.x with your machine’s local IP address so your phone can access the server over LAN.
 
 3. Run the app
 
 npm run dev
-Visit: http://192.xxx.x.x:3000/qr
+Visit: https://xx-xxxx-xxxxxxx-xxxx.onrender.com
 
 Scan the QR code with your phone to test on mobile.
 
 4. Movie Data
-Currently, movie data is served randomly through a mock service. You can replace this with a real API like OMDb or TMDb if needed.
+Currently, movie data is served randomly through a mock service.
 
 5. Testing
 To test QR refresh and movie rendering:

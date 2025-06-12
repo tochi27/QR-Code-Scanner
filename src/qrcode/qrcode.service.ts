@@ -17,7 +17,7 @@ export class QrCodeService {
     this.cache.set(id, movies);
     setTimeout(() => this.cache.delete(id), 600000); // expire in 10 minutes
 
-    const baseUrl = process.env.BASE_URL || "http://192.168.128.48:3000";
+    const baseUrl = process.env.BASE_URL;
     const url = `${baseUrl}/movies/${id}`;
 
     const qrDataUrl = await QRCode.toDataURL(url);
