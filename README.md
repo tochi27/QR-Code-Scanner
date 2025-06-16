@@ -20,26 +20,6 @@ This is a dynamic NestJS application that generates a new QR code every 10 secon
 
 ## Folder Structure
 
-src/
-  main.ts
-  app.module.ts
-  views/
-    qrcode.ejs
-    movies.ejs
-  public/
-    default.jpg
-  root/
-    root.controller.ts
-    root.module.ts
-  qrcode/
-    qrcode.module.ts
-    qrcode.controller.ts
-    qrcode.service.ts
-  movies/
-    movies.module.ts
-    movies.controller.ts
-    movies.service.ts
-
 I intentionally adopted this structure for its efficiency and scalability—particularly beneficial for long-term projects or repositories with a large folder hierarchy.
 By organizing features into self-contained directories (like the qr-code folder), it becomes much easier to work within a specific area of concern.
 For instance, if updates are needed for the QR code functionality, I can simply navigate to the qr-code folder where all related modules, services, and controllers are grouped together.
