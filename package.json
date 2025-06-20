@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nest start",
     "dev": "nest start --watch",
-    "build": "nest build"
+    "build": "nest build && cp -r temp-views dist/views && rm -rf temp-views",
+    "prebuild": "rm -rf temp-views && cp -r views temp-views"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -21,7 +22,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@nestjs/cli": "^10.0.0",
+    "@nestjs/cli": "^10.4.9",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
     "@types/express": "^5.0.3",
